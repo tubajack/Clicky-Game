@@ -1,2 +1,2 @@
 # Clicky-Game
-React.JS application
+This is a memory game using React.JS. 
