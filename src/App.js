@@ -11,4 +11,9 @@ class App extends Component(){
     };
 }
 
+//The coach is removed from the array once it is clicked
+
+
+//Click on a previously selected coach, the game is reset. YOU LOSE. 
+
 export default App;
