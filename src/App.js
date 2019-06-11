@@ -7,8 +7,8 @@ import coaches from "./images"
 class App extends Component(){
     state = {
         coaches, 
-        selectedCoaches = [], 
-        points = 0
+        selectedCoaches: [], 
+        points: 0
     };
 
 
@@ -29,16 +29,14 @@ if(chosenCoach){
         //Sort the coaches in a random order
         coaches: this.state.coaches.sort(function(a, b){
             return Math.random() - 0.5
-        })
-
-    }),
-    selectedCoaches = [],
-    points = 0
-
+        }),
+        selectedCoaches: [],
+        points: 0
+    });
+    
     alert("You lost. Play again?");
-};
-
-else(){
+    
+} else(){
     points = this.state.score + 1;
 }
 
