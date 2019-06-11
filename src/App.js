@@ -43,7 +43,12 @@ class App extends Component(){
             coaches: this.state.coaches.sort(function(a,b){
                 return Math.random() - 0.5
             }),
-
+            //Add the selected coach to the array of coaches that have been selected
+            selectedCoaches: this.state.selectedCoaches.concat(
+                selectedCoaches
+            ),
+            //Don't forget to update the score
+            score: this.state.score + 1
         })
     }
     
