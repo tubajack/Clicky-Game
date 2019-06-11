@@ -35,14 +35,17 @@ if(chosenCoach){
     });
     
     alert("You lost. Play again?");
-    
-} else(){
-    points = this.state.score + 1;
+
 }
-
-
-
 //Click on a coach that has not previously been selected, the score is increased. 
+else(){
+    this.setState({
+        coaches: this.state.coaches.sort(function(a,b){
+            return Math.random() - 0.5
+        }),
+        
+    })
+}
 
 
 //If your score hits 12, YOU WIN. The game is reset. 
