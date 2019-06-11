@@ -45,6 +45,7 @@ else(){
         }),
         
     })
+    points: this.state.points + 1
 }
 
 
