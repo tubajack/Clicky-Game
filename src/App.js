@@ -11,55 +11,52 @@ class App extends Component(){
         points: 0
     };
 
+    //The coach is removed from the array once it is clicked
+    pictureClick = event => {
+        //Figure out which coach was clicked last. 
+        const currentCoach = event.target.alt;
 
-//The coach is removed from the array once it is clicked
-pictureClick = event => {
-    //Figure out which coach was clicked last. 
-    const currentCoach = event.target.alt;
+        //Remove that coach from the array. 
+        const chosenCoach = this.state.selectedCoaches.indexof(selectedCoaches) > -1;
 
-    //Remove that coach from the array. 
-    const chosenCoach = this.state.selectedCoaches.indexof(selectedCoaches) > -1;
+    }
 
-}
-
-
-//Click on a previously selected coach, the game is reset. YOU LOSE. 
-if(chosenCoach){
-    this.setState({
-        //Sort the coaches in a random order
-        coaches: this.state.coaches.sort(function(a, b){
-            return Math.random() - 0.5
-        }),
-        selectedCoaches: [],
-        points: 0
-    });
-    
-    alert("You lost. Play again?");
-
-}
-//Click on a coach that has not previously been selected, the score is increased. 
-else(){
-    this.setState({
-        coaches: this.state.coaches.sort(function(a,b){
-            return Math.random() - 0.5
-        }),
+    //Click on a previously selected coach, the game is reset. YOU LOSE. 
+    if(chosenCoach){
+        this.setState({
+            //Sort the coaches in a random order
+            coaches: this.state.coaches.sort(function(a, b){
+                return Math.random() - 0.5
+            }),
+            selectedCoaches: [],
+            points: 0
+        });
         
-    })
-    points: this.state.points + 1
+        alert("You lost. Play again?");
+
+    }
+    //Click on a coach that has not previously been selected, the score is increased. 
+   
+
+
+
 }
+    
+
+
 
 
 //If your score hits 12, YOU WIN. The game is reset. 
 
 
 //Make sure you render all components
-render(){
-    return(
-        <div>
+// render(){
+//     return(
+//         <div>
 
-        </div>
-    );
-}
+//         </div>
+//     );
+// }
 
-}
+// }
 export default App;
