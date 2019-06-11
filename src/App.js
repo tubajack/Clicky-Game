@@ -56,9 +56,14 @@ class App extends Component(){
             if(this.state.points === 12){
                 alert("Congratulations! You have won the game.");
                 //Once again, you have to shuffle the cards in a random order
-                coaches: this.state.coaches.sort(function(a,b){
-                    return Math.random() - 0.5
-                })
+                this.setState({
+                    coaches: this.state.coaches.sort(function(a,b){
+                        return Math.random() - 0.5;
+                    }), 
+                    selectedCoaches: [],
+                    score: 0
+                });
+                
             }
         }
         
