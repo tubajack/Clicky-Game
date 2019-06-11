@@ -49,15 +49,21 @@ class App extends Component(){
             ),
             //Don't forget to update the score
             score: this.state.score + 1
-        })
+        },
+
+        //What happens when someone gets all 12 of the coaches correctly?
+        () => {
+            if(this.state.points === 12){
+                alert("Congratulations! You have won the game.");
+            }
+        }
+        
+        )
     }
-    
-   
-
-
 
 }
     
+
 
 
 
