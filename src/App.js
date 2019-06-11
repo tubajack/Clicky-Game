@@ -35,7 +35,18 @@ class App extends Component(){
         alert("You lost. Play again?");
 
     }
+    //For some reason, I get an error with my else statement when I dont have a set of parenthesis around it. This is very strange
     //Click on a coach that has not previously been selected, the score is increased. 
+    else(){
+        this.setState({
+            //Sort the coaches in a random order
+            coaches: this.state.coaches.sort(function(a,b){
+                return Math.random() - 0.5
+            }),
+
+        })
+    }
+    
    
 
 
