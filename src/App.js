@@ -24,6 +24,16 @@ pictureClick = event => {
 
 
 //Click on a previously selected coach, the game is reset. YOU LOSE. 
+if(chosenCoach){
+    this.setState({
+
+    }),
+    selectedCoaches = [],
+    score = 0
+
+    alert("You lost. Play again?");
+}
+
 
 
 //Click on a coach that has not previously been selected, the score is increased. 
