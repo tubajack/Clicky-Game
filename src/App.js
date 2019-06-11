@@ -26,6 +26,10 @@ pictureClick = event => {
 //Click on a previously selected coach, the game is reset. YOU LOSE. 
 if(chosenCoach){
     this.setState({
+        //Sort the coaches in a random order
+        coaches: this.state.coaches.sort(function(a, b){
+            return Math.random() - 0.5
+        })
 
     }),
     selectedCoaches = [],
