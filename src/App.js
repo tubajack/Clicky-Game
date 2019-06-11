@@ -18,7 +18,7 @@ pictureClick = event => {
     const currentCoach = event.target.alt;
 
     //Remove that coach from the array. 
-    const chosenCoach = this.state.selectedCoaches.indexof(selectedCoaches);
+    const chosenCoach = this.state.selectedCoaches.indexof(selectedCoaches) > -1;
 
 }
 
