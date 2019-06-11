@@ -29,9 +29,13 @@ if(chosenCoach){
 
     }),
     selectedCoaches = [],
-    score = 0
+    points = 0
 
     alert("You lost. Play again?");
+};
+
+else(){
+    points = this.state.score + 1;
 }
 
 
