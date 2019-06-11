@@ -39,55 +39,47 @@ class App extends Component(){
     //Click on a coach that has not previously been selected, the score is increased. 
     else(){
         this.setState({
-            //Sort the coaches in a random order
-            coaches: this.state.coaches.sort(function(a,b){
-                return Math.random() - 0.5
-            }),
-            //Add the selected coach to the array of coaches that have been selected
-            selectedCoaches: this.state.selectedCoaches.concat(
-                selectedCoaches
-            ),
-            //Don't forget to update the score
-            score: this.state.score + 1
-        },
+                //Sort the coaches in a random order
+                coaches: this.state.coaches.sort(function(a,b){
+                    return Math.random() - 0.5
+                }),
+                //Add the selected coach to the array of coaches that have been selected
+                selectedCoaches: this.state.selectedCoaches.concat(
+                    selectedCoaches
+                ),
+                //Don't forget to update the score
+                score: this.state.score + 1
+            },
 
-        //What happens when someone gets all 12 of the coaches correctly?
-        () => {
-            if(this.state.points === 12){
-                alert("Congratulations! You have won the game.");
-                //Once again, you have to shuffle the cards in a random order
-                this.setState({
-                    coaches: this.state.coaches.sort(function(a,b){
-                        return Math.random() - 0.5;
-                    }), 
-                    selectedCoaches: [],
-                    score: 0
-                });
-                
-            }
-        }
-        
-        )
+            //What happens when someone gets all 12 of the coaches correctly?
+            () => {
+                if(this.state.points === 12){
+                    alert("Congratulations! You have won the game.");
+                    //Once again, you have to shuffle the cards in a random order
+                    this.setState({
+                        coaches: this.state.coaches.sort(function(a,b){
+                            return Math.random() - 0.5;
+                        }), 
+                        selectedCoaches: [],
+                        score: 0
+                    });
+                    
+                }
+            }  
+        );
     }
-
-}
     
+    //At the end of the day, make sure to render all components
+    render(){
+        return(
+            <div>
 
+            </div>
+        )
 
+    }
+};
 
-
-
-//If your score hits 12, YOU WIN. The game is reset. 
-
-
-//Make sure you render all components
-// render(){
-//     return(
-//         <div>
-
-//         </div>
-//     );
-// }
-
-// }
 export default App;
+
+
