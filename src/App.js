@@ -1,12 +1,15 @@
 //Import the react.JS files that are needed
-import react, {Component} from "react"
-import reactDOM from "react-dom";
-import coaches from "./images"
+import React, {Component} from "react"
+import ReactDOM from "react-dom";
+import Header from "./components/header"
+import coachCards from "./components/coachCards"
+import Footer from "./components/Footer"
+import Coaches from "./images"
 
 //Initialize the beginning of the game
 class App extends Component(){
     state = {
-        coaches, 
+        Coaches, 
         selectedCoaches: [], 
         points: 0
     };
