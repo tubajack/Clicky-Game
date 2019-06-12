@@ -20,7 +20,7 @@ class App extends Component(){
         const currentCoach = event.target.alt;
 
         //Remove that coach from the array. 
-        const chosenCoach = this.state.selectedCoaches.indexof(selectedCoaches) > -1;
+        const chosenCoach = this.state.selectedCoaches.indexof(currentCoach) > -1;
 
     }
 
@@ -47,7 +47,7 @@ class App extends Component(){
                     return Math.random() - 0.5
                 }),
                 //Add the selected coach to the array of coaches that have been selected
-                selectedCoaches: this.state.selectedCoaches.concat(selectedCoaches),
+                selectedCoaches: this.state.selectedCoaches.concat(currentCoach),
                 //Don't forget to update the score
                 score: this.state.score + 1
             },
