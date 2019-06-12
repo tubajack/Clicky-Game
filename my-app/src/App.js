@@ -44,9 +44,7 @@ class App extends Component(){
                     return Math.random() - 0.5
                 }),
                 //Add the selected coach to the array of coaches that have been selected
-                selectedCoaches: this.state.selectedCoaches.concat(
-                    selectedCoaches
-                ),
+                selectedCoaches: this.state.selectedCoaches.concat(selectedCoaches),
                 //Don't forget to update the score
                 score: this.state.score + 1
             },
@@ -70,16 +68,13 @@ class App extends Component(){
     }
     
     //At the end of the day, make sure to render all components
-    render(){
-        return(
-            <div>
+    // render(){
+    //     return(
+            
+    //     )
 
-            </div>
-        )
-
-    }
+    // }
 };
 
 export default App;
-
 
