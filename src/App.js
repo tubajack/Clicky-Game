@@ -71,12 +71,15 @@ class App extends Component(){
     }
     
     //At the end of the day, make sure to render all components
-    // render(){
-    //     return(
+    render(){
+        return(
+            <div>
+                <Header score = {this.state.score} />
+            </div>
             
-    //     )
+        )
 
-    // }
+    }
 };
 
 export default App;
