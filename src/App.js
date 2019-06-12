@@ -75,6 +75,16 @@ class App extends Component(){
         return(
             <div>
                 <Header score = {this.state.score} />
+                <div class name = "wrapper">
+                    {this.state.Coaches.map(Coaches => (
+                        <coachCards imageClick = {this.imageClick} 
+                        id = {Coaches.id}
+                        key = {Coaches.id}
+                        image = {Coaches.image}
+                        />
+                    ))}
+                </div>
+                <Footer />
             </div>
             
         )
