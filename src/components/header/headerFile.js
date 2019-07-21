@@ -6,9 +6,11 @@ function Header(props){
         return(
             <div className= "navbar navbar-default navbar-fixed-top">
                 <ul>
-                    <li className = "item-left">These cards feature 12 of the best coaches in women's college basketball.</li>
-                    <li className = "item-center"></li>
-                    <li className = "item-right">Current Score: {props.score}</li>
+                    <li className = "item-left">These are some of the best coaches in women's basketball. 
+                    <li id = "current-score"> Score: {props.score}</li>
+                    <li id = "high-score">High Score: {props.highScore}</li> 
+
+                    </li>
                 </ul>
             </div>
 
